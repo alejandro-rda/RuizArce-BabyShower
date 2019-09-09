@@ -28,9 +28,23 @@ export class AppComponent {
       data: {name: this.name, animal: this.animal}
     });
 
+
     dialogRef.afterClosed().subscribe(result => {
       this.animal = result;
     });
+
+  }
+    openListaRegalos(): void {
+      const dialogRef = this.dialog.open(ListaRegaloComponent, {
+        width: '500px',
+        panelClass: 'custom-dialog-container',
+        data: {name: this.name, animal: this.animal}
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+      this.animal = result;
+    });
+
   }
 
 }
@@ -63,6 +77,29 @@ export class DialogOverviewComponent implements OnInit {
 
   addBusiness(personName) {
     this.bs.addParticipant(personName);
+  }
+
+  ngOnInit(): void {
+  }
+}
+
+@Component({
+  selector: 'app-regalo-component',
+  templateUrl: 'regalo.component.html',
+  styleUrls: ['./dialog.component.css']
+})
+export class ListaRegaloComponent implements OnInit {
+
+  angForm: FormGroup;
+
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverviewComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData, private bs: ParticipantService,
+    private fb: FormBuilder) {
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
   ngOnInit(): void {
