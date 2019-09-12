@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+  font-family: SilverCharm;
+  src: url(assets/fonts/SilverCharm.otf) format("opentype");
+}
+
+.custom-dialog-container .mat-dialog-container {
+  border-color: #284a29;
+  border-style: solid;
+  border-radius: 25px;
+  border-width: 0px;
+}
+
+.custom-dialog-container .mat-form-field{
+  max-width: 450px;
+  width: 450px;
+  margin-left: 4%;
+}
+
+.custom-dialog-container .mat-dialog-actions{
+  margin-left: 40%;
+}
+
+.custom-dialog-success .mat-dialog-container {
+  border-color: #284a29;
+  border-style: solid;
+  border-radius: 25px;
+  border-width: 0;
+
+}
+
+.custom-dialog-success .mat-form-field{
+  max-width: 450px;
+  width: 450px;
+  margin-left: 4%;
+}
+
+.custom-dialog-success .mat-dialog-actions{
+  margin-left: 42%;
+}
