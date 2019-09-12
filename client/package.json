@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "npm run build"
+    "postinstall": "ng build — aot — prod"
   },
   "private": true,
   "dependencies": {
@@ -51,5 +51,7 @@
   "main": "karma.conf.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": { "node": "8.12.0", "npm": "6.4.1" }
+
 }
