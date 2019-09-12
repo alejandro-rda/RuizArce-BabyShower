@@ -52,6 +52,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "engines": { "node": "8.12.0", "npm": "6.4.1" }
+  "engines": { "node": "10.9", "npm": "6.4.1" }
 
 }
