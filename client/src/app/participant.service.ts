@@ -8,7 +8,7 @@ import {MatDialog} from '@angular/material';
 })
 export class ParticipantService {
 
-  uri = 'http://localhost:3000/participant';
+  uri = 'https://backend-ruizarce.herokuapp.com/participant';
 
   constructor(private http: HttpClient, public dialog: MatDialog) { }
 
