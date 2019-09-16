@@ -58,7 +58,7 @@
 .card-title{
   align-content: center;
   text-align: center;
-  font-size: 120px;
+  font-size: 106px;
   font-family: 'SilverCharm', serif;
 }
 
@@ -109,6 +109,24 @@
 
 .card-date{
   margin-top: 05%;
+  align-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-family: Arial, serif;
+  font-style: italic;
+}
+
+.card-address{
+  margin-top: 1%;
+  align-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-family: Arial, serif;
+  font-style: italic;
+}
+
+.card-location{
+  margin-top: 1%;
   align-content: center;
   text-align: center;
   font-size: 20px;
