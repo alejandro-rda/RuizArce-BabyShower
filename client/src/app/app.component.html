@@ -228,26 +228,6 @@
     align-items: center;
   }
 
-  .github-star-badge {
-    color: #24292e;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    padding: 3px 10px;
-    border: 1px solid rgba(27, 31, 35, .2);
-    border-radius: 3px;
-    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-    margin-left: 4px;
-    font-weight: 600;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  }
-
-  .github-star-badge:hover {
-    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-    border-color: rgba(27, 31, 35, .35);
-    background-position: -.5em;
-  }
-
   .github-star-badge .material-icons {
     height: 16px;
     width: 16px;
@@ -294,54 +274,61 @@
   }
 </style>
 
-<div class="content" role="main">
-  <div class='card-container' [ngClass]="{'flipped':flipped}" (click)='flipped = !flipped'>
-    <mat-card class="front">
-      <mat-card-header>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="card-title">Baby Shower</p>
-        <p class="card-subtitle">Dylan Ruiz Arce</p>
-        <p class="card-date">05 de Octubre del 2019 a las 5pm</p>
-        <p class="card-place">Calle Veitiocho 125, Urb. Corpac - San Isidro</p>
-        <div class="button-next">
-          <button mat-fab aria-label="Example icon-button with a heart icon">
-            <mat-icon>arrow_forward_ios</mat-icon>
-          </button>
-        </div>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="back">
-      <mat-card-header>
-      </mat-card-header>
-      <mat-card-content class="card-back-content">
-        <p class="card-back-title">Programa</p>
-        <div>
-          <p class="card-back-subtitle"> 17:00 Recepción y Bienvenida</p>
-          <p class="card-back-subtitle"> 17:30 Música de Apertura: Circle of Life</p>
-          <p class="card-back-subtitle"> 17:35 Palabras de los Papis</p>
-          <p class="card-back-subtitle"> 17:50 Juego Sorpresa #1</p>
-          <p class="card-back-subtitle"> 18:10 Entrega de Regalos #1</p>
-          <p class="card-back-subtitle"> 18:30 Juego Sorpresa #2</p>
-          <p class="card-back-subtitle"> 18:50 Entrega de Regalos #2</p>
-          <p class="card-back-subtitle"> 19:10 Juego Sorpresa #3</p>
-          <p class="card-back-subtitle"> 19:30 Entrega de Regalos #3</p>
-          <p class="card-back-subtitle"> 19:50 Juego Sorpresa #4</p>
-          <p class="card-back-subtitle"> 20:10 After Party</p>
-        </div>
-        <div class="btn-back" >
-          <button color="warn" class="btn-back-icon" mat-fab aria-label="Example icon-button with a heart icon">
-            <mat-icon>arrow_back_ios</mat-icon>
-          </button>
-          <button class="btn-submit" mat-fab color="accent" (click)="openDialog()">Confirmar</button>
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <!-- Footer -->
-  <footer>
-  </footer>
-</div>
+<mat-grid-list [rowHeight]="600" cols="1">
+  <mat-grid-tile
+    *ngFor="let tile of tiles"
+    [colspan]="1"
+    [rowspan]="1">
+    <div class="content" fxLayout="column" role="main">
+      <div class='card-container' [ngClass]="{'flipped':flipped}" (click)='flipped = !flipped'>
+        <mat-card class="front">
+          <mat-card-header>
+          </mat-card-header>
+          <mat-card-content>
+            <p class="card-title">Baby Shower</p>
+            <p class="card-subtitle">Dylan Ruiz Arce</p>
+            <p class="card-date">05 de Octubre del 2019 a las 5pm</p>
+            <p class="card-place">Calle Veitiocho 125, Urb. Corpac - San Isidro</p>
+            <div class="button-next">
+              <button mat-fab aria-label="Example icon-button with a heart icon">
+                <mat-icon>arrow_forward_ios</mat-icon>
+              </button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="back">
+          <mat-card-header>
+          </mat-card-header>
+          <mat-card-content class="card-back-content">
+            <p class="card-back-title">Programa</p>
+            <div>
+              <p class="card-back-subtitle"> 17:00 Recepción y Bienvenida</p>
+              <p class="card-back-subtitle"> 17:30 Música de Apertura: Circle of Life</p>
+              <p class="card-back-subtitle"> 17:35 Palabras de los Papis</p>
+              <p class="card-back-subtitle"> 17:50 Juego Sorpresa #1</p>
+              <p class="card-back-subtitle"> 18:10 Entrega de Regalos #1</p>
+              <p class="card-back-subtitle"> 18:30 Juego Sorpresa #2</p>
+              <p class="card-back-subtitle"> 18:50 Entrega de Regalos #2</p>
+              <p class="card-back-subtitle"> 19:10 Juego Sorpresa #3</p>
+              <p class="card-back-subtitle"> 19:30 Entrega de Regalos #3</p>
+              <p class="card-back-subtitle"> 19:50 Juego Sorpresa #4</p>
+              <p class="card-back-subtitle"> 20:10 After Party</p>
+            </div>
+            <div class="btn-back" >
+              <button color="warn" class="btn-back-icon" mat-fab aria-label="Example icon-button with a heart icon">
+                <mat-icon>arrow_back_ios</mat-icon>
+              </button>
+              <button class="btn-submit" mat-fab color="accent" (click)="openDialog()">Confirmar</button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <!-- Footer -->
+      <footer>
+      </footer>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->

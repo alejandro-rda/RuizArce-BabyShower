@@ -13,14 +13,15 @@ import { ParticipantService } from './participant.service';
 import { HttpClientModule } from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {SuccessComponent} from './success.component';
-
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent, DialogOverviewComponent, SuccessComponent, ListaRegaloComponent
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, MatCardModule, MatButtonModule, MatIconModule,
+    BrowserModule, FlexLayoutModule, BrowserAnimationsModule, MatCardModule, MatButtonModule, MatIconModule,
     MatGridListModule, FormsModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatToolbarModule, MatListModule,
     HttpClientModule, ReactiveFormsModule, RouterModule.forRoot([])
   ],

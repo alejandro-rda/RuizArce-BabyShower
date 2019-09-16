@@ -1,18 +1,18 @@
-<div mat-dialog-title style="color: #3f7541">
-  <mat-toolbar class="task-header" color="warn" role="toolbar">
-    <mat-toolbar-row>
-      <span class="gap"></span>
-      <span>Éxito</span>
-      <span class="filler"></span>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</div>
-<div mat-dialog-content>
-  <span class="mat-title-success">Se registro correctamente al evento.</span>
-</div>
-<div class="mat-dialog-title" mat-dialog-actions>
-  <button (click)="onNoClick()"
-          mat-button>Cerrar
-  </button>
-</div>
+<mat-toolbar class="task-header" color="warn" role="toolbar">
+  <mat-toolbar-row>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title style="margin-top: 5%"><span style="margin-left: 5%">Exito</span></mat-card-title>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-card class="example-card">
+  <mat-card-content  style="text-align: center">
+    <p></p>
+    <span class="mat-title-success">Se registro correctamente al evento.</span>
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="onNoClick()"
+            mat-button>Cerrar
+    </button>
+  </mat-card-actions>
+</mat-card>
 

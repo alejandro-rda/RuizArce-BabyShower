@@ -39,6 +39,18 @@
   text-align: center;
 }
 
+.custom-dialog-success .mat-card .mat-card-actions{
+  text-align: center;
+}
+
 .custom-dialog-container .mat-dialog-title {
   margin: 0;
+}
+
+.custom-dialog-success .mat-card-header {
+  text-align: center;
+}
+
+.custom-dialog-success .mat-dialog-container{
+  padding: 0;
 }

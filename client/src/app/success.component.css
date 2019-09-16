@@ -21,7 +21,7 @@
 }
 
 .mat-toolbar {
-  margin: -24px -24px 0;
+  margin: 0;
   width: auto;
   align-items: center;
   background-color: #3f7541;
@@ -50,6 +50,11 @@
 
 .mat-title-success{
   font-family: Arial, serif;
+}
+
+.example-header-image {
+  background-image: url('../assets/images/face.png');
+  background-size: cover;
 }
 
 
