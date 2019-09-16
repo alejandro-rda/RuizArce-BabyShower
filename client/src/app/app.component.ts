@@ -67,7 +67,7 @@ export class DialogOverviewComponent implements OnInit {
 
   createForm() {
     this.angForm = this.fb.group({
-      personName: ['', Validators.required ]
+      personName: ['', [Validators.required, Validators.pattern('^[A-Za-z0-9 ]+')]]
     });
   }
 

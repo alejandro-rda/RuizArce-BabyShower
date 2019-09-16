@@ -4,6 +4,19 @@
   /* background: 0 0; */
 }
 
+.custom-flex-div{
+
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('../assets/images/face.png');
+  background-size: cover;
+}
+
 .title-dialog{
   text-align: center;
 }

@@ -1,34 +1,56 @@
-<div mat-dialog-title style="color: #3f7541">
-  <mat-toolbar role="toolbar" color="warn" class="task-header">
-    <mat-toolbar-row>
-      <span class="gap"></span>
-      <span>Confirma tu asistencia</span>
-      <span class="filler"></span>
-      <div class="button-right-custom">
-        <button type="button" mat-icon-button (click)="onNoClick()">
-          <mat-icon>close</mat-icon>
-        </button>
-      </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</div>
-<form class="form-Modal" [formGroup]="angForm" novalidate>
-<div mat-dialog-content>
-    <mat-form-field class="example-full-width">
-      <label>
-        <input type="text" formControlName="personName" name="personName" matInput placeholder="Nombre" value="">
-      </label>
-      <div *ngIf="angForm.controls['personName'].invalid && (angForm.controls['personName'].dirty || angForm.controls['personName'].touched)" class="alert alert-danger">
-        <div *ngIf="angForm.controls['personName'].errors.required">
-          Ingrese su nombre.
+<div class="custom-flex-div" mat-dialog-title style="color: #3f7541">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Confirma tu asistencia</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="form-Modal" [formGroup]="angForm" novalidate>
+        <mat-form-field class="example-full-width">
+          <div
+            *ngIf="angForm.controls['personName'].invalid && (angForm.controls['personName'].dirty || angForm.controls['personName'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angForm.controls['personName'].errors.required">
+              <p style="color: darkred">Ingrese su nombre.
+            </div>
+            <div *ngIf="angForm.controls['personName'].errors.pattern">
+              <p style="color: darkred">Solo se permite el ingreso de letras y números.
+            </div>
+          </div>
+          <label>
+            <input type="text" formControlName="personName" name="personName" matInput placeholder="Nombre" value="">
+          </label>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button [mat-dialog-close]="data.animal"
+              [disabled]="angForm.pristine || angForm.invalid"
+              (click)="addBusiness(angForm.get('personName').value)">Confirmar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+ <!-- <div>
+    <mat-toolbar role="toolbar" color="warn" class="task-header">
+      <mat-toolbar-row>
+        <span class="gap"></span>
+        <span>Confirma tu asistencia</span>
+        <span class="filler"></span>
+        <div class="button-right-custom">
+          <button type="button" mat-icon-button (click)="onNoClick()">
+            <mat-icon>close</mat-icon>
+          </button>
         </div>
-      </div>
-    </mat-form-field>
-</div>
-<div mat-dialog-actions class="mat-dialog-title">
-  <button mat-button [mat-dialog-close]="data.animal"
-          [disabled]="angForm.pristine || angForm.invalid"
-          (click)="addBusiness(angForm.get('personName').value)">Confirmar</button>
-</div>
-</form>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+  <div mat-dialog-content>
 
+  </div>
+  <div mat-dialog-actions class="mat-dialog-title">
+    <button mat-button [mat-dialog-close]="data.animal"
+            [disabled]="angForm.pristine || angForm.invalid"
+            (click)="addBusiness(angForm.get('personName').value)">Confirmar
+    </button>
+  </div>-->
+</div>

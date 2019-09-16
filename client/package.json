@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "ng": "ng",
+    "debug": "ng serve",
     "start": "node server.js",
     "build": "ng build --prod",
     "test": "ng test",

@@ -142,6 +142,7 @@
 
 .mat-form-field {
   width: 450px;
+  display: none;
 }
 
 .example-full-width {
