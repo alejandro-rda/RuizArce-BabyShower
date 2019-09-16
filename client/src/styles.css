@@ -10,17 +10,11 @@
   border-style: solid;
   border-radius: 25px;
   border-width: 0;
+  width: auto;
 }
 
 .custom-dialog-container .mat-form-field{
-  max-width: 450px;
-  width: 450px;
-  margin-left: 4%;
   display: inline;
-}
-
-.custom-dialog-container .mat-dialog-actions{
-  margin-left: 40%;
 }
 
 .custom-dialog-success .mat-dialog-container {
@@ -43,4 +37,8 @@
 
 .custom-dialog-container .mat-card .mat-card-actions{
   text-align: center;
+}
+
+.custom-dialog-container .mat-dialog-title {
+  margin: 0;
 }

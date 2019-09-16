@@ -23,7 +23,6 @@ export class AppComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewComponent, {
-      width: '500px',
       panelClass: 'custom-dialog-container',
       data: {name: this.name, animal: this.animal}
     });
@@ -36,7 +35,6 @@ export class AppComponent {
   }
     openListaRegalos(): void {
       const dialogRef = this.dialog.open(ListaRegaloComponent, {
-        width: '500px',
         panelClass: 'custom-dialog-container',
         data: {name: this.name, animal: this.animal}
       });
