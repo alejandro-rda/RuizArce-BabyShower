@@ -1,20 +1,15 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import { ParticipantService } from './participant.service';
-import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
+import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 import { HostListener } from '@angular/core';
+import {RequireMatch} from './requireMatch';
+import {Participant} from './participant';
 
 
 export interface DialogData {
   animal: string;
   name: string;
-}
-
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
 }
 
 @Component({
@@ -28,9 +23,6 @@ export class AppComponent {
 
   animal: string;
   name: string;
-  tiles: Tile[] = [
-    {text: 'One', cols: 4, rows: 1, color: 'lightblue'},
-  ];
 
   constructor(public dialog: MatDialog) {}
 
@@ -67,31 +59,36 @@ export class AppComponent {
 })
 export class DialogOverviewComponent implements OnInit {
 
-  angForm: FormGroup;
-  tiles: Tile[] = [
-    {text: 'One', cols: 4, rows: 1, color: 'lightblue'},
-  ];
-  // Declare height and width variables
+  form: FormGroup;
+  participants: Participant[];
   scrHeight: any;
   scrWidth: any;
   @HostListener('window:resize', ['$event'])
   getScreenSize(event?) {
     this.scrHeight = window.innerHeight;
     this.scrWidth = window.innerWidth;
-    console.log(this.scrHeight, this.scrWidth);
   }
 
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData, private bs: ParticipantService,
     private fb: FormBuilder) {
-    this.createForm();
+    this.participants = [
+      new Participant('Alejandro Ruiz'),
+      new Participant('Alvaro Leiva'),
+      new Participant('Ronald Canchanya'),
+      new Participant('Fernando Gordillo')
+    ];
   }
 
   createForm() {
-    this.angForm = this.fb.group({
-      personName: ['', [Validators.required, Validators.pattern('^[A-Za-z0-9 ]+')]]
+    this.form = new FormGroup({
+      participant: new FormControl('', [Validators.required, RequireMatch]),
     });
+  }
+
+  displayWith(obj?: any): string | undefined {
+    return obj ? obj.name : undefined;
   }
 
   onNoClick(): void {
@@ -103,7 +100,7 @@ export class DialogOverviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getScreenSize();
+    this.createForm();
   }
 }
 

@@ -7,7 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatDialogModule, MatFormFieldModule, MatInputModule, MatToolbarModule} from '@angular/material';
+import {MatAutocompleteModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatToolbarModule} from '@angular/material';
 import {MatListModule} from '@angular/material/list';
 import { ParticipantService } from './participant.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,7 +23,7 @@ import {MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
   imports: [
     BrowserModule, FlexLayoutModule, BrowserAnimationsModule, MatCardModule, MatButtonModule, MatIconModule,
     MatGridListModule, FormsModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatToolbarModule, MatListModule,
-    HttpClientModule, ReactiveFormsModule, RouterModule.forRoot([])
+    HttpClientModule, ReactiveFormsModule, RouterModule.forRoot([]), MatAutocompleteModule
   ],
   exports: [RouterModule],
   providers: [ParticipantService],

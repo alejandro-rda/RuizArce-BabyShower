@@ -14,7 +14,7 @@ export class ParticipantService {
 
   addParticipant(personName) {
     const obj = {
-      person_name: personName,
+      person_name: personName.name,
     };
     this.http.post(`${this.uri}/add`, obj)
       .subscribe();

@@ -8,28 +8,31 @@
 </mat-toolbar>
 <mat-card class="example-card">
   <mat-card-content>
-    <form class="form-Modal" [formGroup]="angForm" novalidate>
+    <form class="form-Modal" [formGroup]="form">
       <mat-form-field class="example-full-width">
-        <div
-          *ngIf="angForm.controls['personName'].invalid && (angForm.controls['personName'].dirty || angForm.controls['personName'].touched)"
-          class="alert alert-danger">
-          <div *ngIf="angForm.controls['personName'].errors.required">
-            <p style="color: darkred">Ingrese su nombre.
-          </div>
-          <div *ngIf="angForm.controls['personName'].errors.pattern">
-            <p style="color: darkred">Solo se permite el ingreso de letras y números.
-          </div>
-        </div>
         <label>
-          <input type="text" formControlName="personName" name="personName" matInput placeholder="Nombre" value="">
+          <input type="text"  matInput formControlName="participant" placeholder="Nombre"
+                 [matAutocomplete]="participantComplete">
         </label>
+        <mat-autocomplete #participantComplete="matAutocomplete" [displayWith]="displayWith">
+            <mat-option *ngFor="let participant of participants" [value]="participant">
+              {{ participant.name }}
+            </mat-option>
+          </mat-autocomplete>
+          <mat-error *ngIf="form.controls['participant'].hasError('required')">
+            Solo se permite el ingreso de letras y espacio.
+          </mat-error>
+          <mat-error *ngIf="form.controls['participant'].hasError('incorrect')">
+            Ingrese un nombre de asistente válido.
+          </mat-error>
       </mat-form-field>
     </form>
   </mat-card-content>
   <mat-card-actions>
+    <p></p>
     <button mat-button [mat-dialog-close]="data.animal"
-            [disabled]="angForm.pristine || angForm.invalid"
-            (click)="addBusiness(angForm.get('personName').value)">Confirmar
+            [disabled]="form.pristine || form.invalid"
+            (click)="addBusiness(form.get('participant').value)">Confirmar
     </button>
   </mat-card-actions>
 </mat-card>
