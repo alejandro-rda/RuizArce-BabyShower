@@ -2,7 +2,7 @@
   <mat-toolbar-row>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title style="margin-top: 5%">
-      <span style="margin-left: 5%;  font-size: 18px;">Confirma tu asistencia</span>
+      <span style="margin-left: 5%;  font-size: 22px;">Confirma tu asistencia</span>
     </mat-card-title>
   </mat-toolbar-row>
 </mat-toolbar>
@@ -11,11 +11,11 @@
     <form class="form-Modal" [formGroup]="form">
       <mat-form-field class="example-full-width">
         <label>
-          <input type="text"  matInput formControlName="participant" placeholder="Nombre"
+          <input type="text" matInput formControlName="participant" [formControl]="myControl" placeholder="Nombre"
                  [matAutocomplete]="participantComplete">
         </label>
-        <mat-autocomplete #participantComplete="matAutocomplete" [displayWith]="displayWith">
-            <mat-option *ngFor="let participant of participants" [value]="participant">
+        <mat-autocomplete #participantComplete="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let participant of filteredOptions | async" [value]="participant">
               {{ participant.name }}
             </mat-option>
           </mat-autocomplete>
