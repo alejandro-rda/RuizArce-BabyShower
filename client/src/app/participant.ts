@@ -129,6 +129,13 @@ export class Participant {
     new Participant('Juan Carlos Correa'),
     new Participant('Alex Leo'),
     new Participant('Daniela Leo'),
+    new Participant('Daniela Andrade'),
+    new Participant('Gonzalo Diaz'),
+    new Participant('Gladys Valentin'),
+    new Participant('Iris Villegas'),
+    new Participant('Mayumi'),
+    new Participant('Steph Morzan'),
+    new Participant('Herberth Corazao'),
     new Participant('Alejandra Fuertes'),
     new Participant('Elita Ruiz'),
     new Participant('Andrea Ruiz')
