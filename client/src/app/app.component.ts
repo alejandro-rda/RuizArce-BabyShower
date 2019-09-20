@@ -104,7 +104,7 @@ export class DialogOverviewComponent implements OnInit {
         map(value => {
           return typeof value === 'string' ? value : value.name;
         }),
-        map(name => name ? this._filter(name) : Participant.participants.slice())
+        map(val => val.length >= 1 ? this._filter(val) : [])
       );
   }
 }
