@@ -13,6 +13,7 @@ export class Participant {
     new Participant('Daniel Olano'),
     new Participant('Anthony Mateo'),
     new Participant('Claudia Gamarra'),
+    new Participant('Kenny Moncada'),
     new Participant('Carlos Araujo'),
     new Participant('Doris Arraiza'),
     new Participant('Giovanna Haro'),
