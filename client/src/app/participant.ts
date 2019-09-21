@@ -39,6 +39,8 @@ export class Participant {
     new Participant('Isamar'),
     new Participant('Emperatriz'),
     new Participant('Marilu'),
+    new Participant('Kassey'),
+    new Participant('Ivonne'),
     new Participant('Jose Marchena'),
     new Participant('Juan Jose'),
     new Participant('Wilmer Salazar'),
