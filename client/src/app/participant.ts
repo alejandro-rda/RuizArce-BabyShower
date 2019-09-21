@@ -43,6 +43,7 @@ export class Participant {
     new Participant('Ivonne'),
     new Participant('Jose Marchena'),
     new Participant('Juan Jose'),
+    new Participant('Fernando Tito'),
     new Participant('Giancarlo Chiappe'),
     new Participant('Wilmer Salazar'),
     new Participant('Gerardo Camino'),
