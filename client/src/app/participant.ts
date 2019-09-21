@@ -48,6 +48,7 @@ export class Participant {
     new Participant('Wilmer Salazar'),
     new Participant('Gerardo Camino'),
     new Participant('Braulio Vargas'),
+    new Participant('Alejandro Vasquez'),
     new Participant('Julio Ruiz'),
     new Participant('Renzo Paredes'),
     new Participant('Carlos Begazo'),
