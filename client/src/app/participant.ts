@@ -146,7 +146,15 @@ export class Participant {
     new Participant('Herberth Corazao'),
     new Participant('Alejandra Fuertes'),
     new Participant('Elita Ruiz'),
-    new Participant('Andrea Ruiz')
+    new Participant('Andrea Ruiz'),
+    new Participant('Diego Ruiz'),
+    new Participant('Elita Karen Ruiz'),
+    new Participant('Lucia Ruiz'),
+    new Participant('Yngrith Grozzo'),
+    new Participant('Mary Sanchez'),
+    new Participant('Flor Tamayo'),
+    new Participant('Miguel Yoshida'),
+    new Participant('Promo80 =)')
   ];
   id: number;
   name: string;
