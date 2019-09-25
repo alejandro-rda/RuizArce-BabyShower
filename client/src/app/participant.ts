@@ -22,7 +22,7 @@ export class Participant {
     new Participant('Diego Cumpa'),
     new Participant('Peter Caceres'),
     new Participant('Andherson'),
-    new Participant('Victor Grimaldo'),
+    new Participant('Victor Grimaldos'),
     new Participant('Kendy Otiniano'),
     new Participant('Luis Huapaya'),
     new Participant('Paolo Ortega'),
@@ -154,7 +154,8 @@ export class Participant {
     new Participant('Mary Sanchez'),
     new Participant('Flor Tamayo'),
     new Participant('Miguel Yoshida'),
-    new Participant('Promo80 =)')
+    new Participant('Promo80 =)'),
+    new Participant('Familia Ruiz')
   ];
   id: number;
   name: string;
